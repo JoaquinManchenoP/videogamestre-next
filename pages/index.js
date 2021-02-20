@@ -3,6 +3,8 @@ import styles from "../styles/Home.module.css";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+import Slider from "../public/Components/Slider";
+
 import React, { useContext } from "react";
 import { Context } from "../public/Components/Context";
 
@@ -13,18 +15,22 @@ export default function Home() {
     setToggleState(false);
   }
 
-  return (
-    <motion.div className="indexPage h-screen w-screen bg-red-400" onClick = {handleClick}>
-      <motion.div
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
 
-        exit={{ opacity: 0 }}
-        className="indexPage"
-      >
-        <div className="text">
-          <h1>This is the index page</h1>
-        </div>
-        <Link href="/GenresPage">Genres</Link>
-      </motion.div>
+  return (
+    <motion.div
+      className="indexPage h-screen w-screen bg-gray-800 flex flex-col items-center justify-items-center"
+      onClick={handleClick}
+    >
+      <Slider />
+
+      <div className="games">This is a game</div>
     </motion.div>
   );
 }

@@ -8,10 +8,16 @@
     "start": "next start"
   },
   "dependencies": {
+    "@brainhubeu/react-carousel": "^1.19.26",
+    "@popmotion/popcorn": "^0.4.4",
     "framer-motion": "^3.6.1",
     "next": "10.0.7",
+    "popmotion": "^9.1.0",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "react-icons": "^4.2.0",
+    "react-responsive-carousel": "^3.2.12",
+    "react-slick": "^0.28.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.4",

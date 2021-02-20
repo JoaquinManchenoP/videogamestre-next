@@ -12,7 +12,7 @@ export default function GenresPage() {
 
   return (
     <div
-      className="genres_page h-screen w-screen bg-purple-400"
+      className="genres_page h-screen w-screen bg-gray-800"
       onClick={handleToggle}
     >
       <motion.div className="genres " exit={{ opacity: 0 }}>

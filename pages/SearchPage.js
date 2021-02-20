@@ -12,7 +12,7 @@ export default function searchPage() {
   }
   return (
     <motion.div
-      className="h-screen w-screen bg-yellow-600"
+      className="h-screen w-screen bg-gray-800"
       onClick={handleToggle}
       exit={{ opacity: 0 }}
     >

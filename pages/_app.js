@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps, router }) {
     <>
       <Store>
         <div className="app flex">
-          <div className="nav z-10 absolute">
+          <div className="nav z-20 absolute">
             <NavBar />
           </div>
 
