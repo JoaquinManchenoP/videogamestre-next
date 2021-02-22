@@ -23,10 +23,10 @@ export default function NavBar() {
     setToggleState(false);
   }
   return (
-    <div className="nav__bar flex">
+    <div className="nav__bar flex fixed  ">
       <AnimatePresence>
         {toggleState && (
-          <div className="options">
+          <div className="options ">
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: 250 }}
@@ -51,7 +51,7 @@ export default function NavBar() {
                   transition={{ duration: 0.2 }}
                   exit={{ opacity: 0 }}
                 >
-                  <Link href="/">
+                  <Link scroll={false} href="/">
                     <div
                       style={{ cursor: "pointer" }}
                       className="option flex space-x-3"
@@ -77,7 +77,7 @@ export default function NavBar() {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Link href="/GenresPage">
+                  <Link scroll={false} href="/GenresPage">
                     <div
                       style={{ cursor: "pointer" }}
                       className="option flex space-x-3"
@@ -103,7 +103,7 @@ export default function NavBar() {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Link href="/SearchPage">
+                  <Link scroll={false} href="/SearchPage">
                     <div
                       style={{ cursor: "pointer" }}
                       className="option flex space-x-3"
@@ -122,7 +122,7 @@ export default function NavBar() {
         )}
       </AnimatePresence>
 
-      <div className="toggle flex items-center justify-center h-screen w-3 ">
+      <div className="toggle flex items-center justify-center h-screen w-3 pl-3 ">
         <motion.div
           initial={{ opacity: 0 }}
           whileHover={{ opacity: 0.1 }}
@@ -133,7 +133,7 @@ export default function NavBar() {
           onClick={toggleNav}
           initial={{ opacity: 0.3 }}
           whileHover={{ opacity: 1 }}
-          className="button h-36 w-3 bg-gray-500 rounded-xl z-10 absolute mr-1 ml-2"
+          className="button h-40 w-3 bg-gray-400 rounded-xl z-10 absolute mr-1 "
         ></motion.div>
       </div>
     </div>

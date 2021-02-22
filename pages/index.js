@@ -3,9 +3,7 @@ import styles from "../styles/Home.module.css";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import GameShowcase from "../public/Components/GameShowcase";
-
 import Slider from "../public/Components/Slider";
-
 import React, { useContext } from "react";
 import { Context } from "../public/Components/Context";
 
@@ -15,14 +13,6 @@ export default function Home() {
   function handleClick() {
     setToggleState(false);
   }
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
 
   return (
     <motion.div
