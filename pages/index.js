@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import GameShowcase from "../public/Components/GameShowcase";
 
 import Slider from "../public/Components/Slider";
 
@@ -25,12 +26,11 @@ export default function Home() {
 
   return (
     <motion.div
-      className="indexPage h-screen w-screen bg-gray-800 flex flex-col items-center justify-items-center"
+      className="indexPage h-full w-screen bg-gray-800 flex flex-col items-center justify-items-center space-y-12"
       onClick={handleClick}
     >
       <Slider />
-
-      <div className="games">This is a game</div>
+      <GameShowcase />
     </motion.div>
   );
 }

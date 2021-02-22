@@ -2,6 +2,7 @@ import "tailwindcss/tailwind.css";
 import { AnimatePresence } from "framer-motion";
 import NavBar from "../public/Components/NavBar.js";
 import Store from "../public/Components/Context";
+import "swiper/swiper.cjs";
 
 function MyApp({ Component, pageProps, router }) {
   console.log(router);

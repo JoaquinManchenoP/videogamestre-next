@@ -30,12 +30,12 @@ export default function Slider() {
         exit={{ opacity: 0 }}
         transition={{
           x: { type: "spring", stiffness: 300 },
-          opacity: { duration: 0.5, delay: 0.1 },
+          opacity: { duration: 0.5, delay: 0 },
         }}
         drag="x"
         dragConstraints={{ left: 0, right: 0 }}
         dragElastic={1}
-        className="hero_image h-3/6 w-9/12 mt-12 bg-red-400 rounded-xl shadow-xl object-cover"
+        className="hero_image h-3/6 w-9/12 mt-16 bg-red-400 rounded-xl shadow-xl object-cover"
       ></motion.img>
       <div className="buttons w-full h-20  flex justify-between z-10 absolute items-center pt-64  ">
         <motion.div
