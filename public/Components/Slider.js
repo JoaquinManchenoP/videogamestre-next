@@ -35,14 +35,15 @@ export default function Slider() {
         drag="x"
         dragConstraints={{ left: 0, right: 0 }}
         dragElastic={1}
-        className="hero_image h-3/6 w-9/12 mt-16 bg-red-400 rounded-xl shadow-xl object-cover"
+        className="hero_image h-96  w-4/6  mt-16 rounded-xl shadow-xl object-cover object-top"
       ></motion.img>
-      <div className="buttons w-full h-20  flex justify-between z-10 absolute items-center pt-64  ">
+      <div className="buttons w-full h-20  flex justify-between z-10 absolute items-center pt-48  ">
         <motion.div
-          className="text-white text-2xl pl-16  "
+          className="text-white text-2xl pl-16 pt-16 "
           initial={{ scale: 1, x: 0 }}
           whileHover={{ scale: 1.2, x: -8 }}
           whileTap={{ scale: 0.8, x: 8 }}
+          exit={{ opacity: 0 }}
           onClick={() => paginate(-1)}
           transition={{ duration: 0.2 }}
         >
@@ -55,6 +56,7 @@ export default function Slider() {
           whileHover={{ scale: 1.2, x: 8 }}
           whileTap={{ scale: 0.8, x: -8 }}
           transition={{ duration: 0.2 }}
+          exit={{ opacity: 0 }}
           onClick={() => paginate(1)}
         >
           <FaArrowAltCircleRight />

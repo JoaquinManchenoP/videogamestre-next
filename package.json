@@ -10,6 +10,7 @@
   "dependencies": {
     "@brainhubeu/react-carousel": "^1.19.26",
     "@popmotion/popcorn": "^0.4.4",
+    "axios": "^0.21.1",
     "framer-motion": "^3.6.1",
     "next": "10.0.7",
     "node-sass": "^5.0.0",
@@ -20,6 +21,7 @@
     "react-multi-carousel": "^2.6.1",
     "react-responsive-carousel": "^3.2.12",
     "react-slick": "^0.28.0",
+    "react-spinners": "^0.10.6",
     "swiper": "^6.4.15"
   },
   "devDependencies": {
