@@ -27,7 +27,7 @@ export default function GameCard({
             ></motion.img>
           )}
         </div>
-        <div className="info flex justify-between mx-3  ">
+        <div className="info flex justify-between mx-3 pt-2 ">
           <div className=" ">
             <div className="font-light text-lg pl-2">
               <h3>{gameName}</h3>

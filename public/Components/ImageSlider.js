@@ -14,7 +14,7 @@ export default function ImageSlider({ games }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="slider h-96 w-full flex  overflow-y-hidden  "
+        className="slider h-96 w-full flex  overflow-y-hidden mx-20  "
       >
         {games && (
           <div className="image flex h-96 w-screen pt-6 ">

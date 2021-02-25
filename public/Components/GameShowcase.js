@@ -67,17 +67,17 @@ export default function gameShowcase() {
         <>
           <div className="trending ">
             <motion.div className="trending__titl pl-28 text-3xl font-extralight underline pb-2  ">
-              <h1>Popular</h1>
+              < h1 className = "pl-16">Popular</h1>
             </motion.div>
             {videoGamesTrending && (
-              <div className="slider mx-12 ">
+              <div className="slider mx-12">
                 <ImageSlider games={videoGamesTrending} />
               </div>
             )}
           </div>
           <div className="new__games pt-10">
             <motion.div className="trending__title pl-28 text-3xl font-extralight underline pb-2  ">
-              <h1>New Games</h1>
+              <h1 className="pl-16">New Games</h1>
             </motion.div>
             {videoGamesTrending && (
               <div className="slider mx-12 ">
