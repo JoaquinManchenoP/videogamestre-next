@@ -7,18 +7,17 @@ import GameCard from "./GameCard";
 import axios from "axios";
 
 export default function ImageSlider({ games }) {
-  console.log(games);
   return (
     <>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="slider h-96 w-full flex  overflow-y-hidden mx-20  "
+        className="slider h-96 w-full flex  overflow-y-hidden "
       >
         {games && (
-          <div className="image flex h-96 w-screen pt-6 ">
-            {games.data.results.map((game, i) => (
+          <div className="image flex h-96 w-screen pt-6 space-x-5 ">
+            {games.map((game, i) => (
               <div className="foto ">
                 <GameCard
                   releaseDate={game.released}

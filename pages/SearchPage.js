@@ -3,12 +3,15 @@ import { motion } from "framer-motion";
 import { Context } from "../public/Components/Context";
 
 export default function searchPage() {
-  const [toggleState, setToggleState] = useContext(Context);
-
-  console.log(toggleState);
+  const [state, setState] = useContext(Context);
 
   function handleToggle() {
-    setToggleState(false);
+    if (state.toggleNav) {
+      setState({
+        ...state,
+        toggleNav: false,
+      });
+    }
   }
   return (
     <motion.div

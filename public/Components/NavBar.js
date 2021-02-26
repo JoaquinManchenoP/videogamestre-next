@@ -8,24 +8,28 @@ import { BsFillCollectionFill } from "react-icons/bs";
 import { FaSearch } from "react-icons/Fa";
 
 export default function NavBar() {
-  const [toggleState, setToggleState] = useContext(Context);
+  const [state, setState] = useContext(Context);
 
   const router = useRouter();
-  function toggleNav() {
-    if (toggleState) {
-      setToggleState(false);
+
+  function handleToggle() {
+    if (state.toggleNav) {
+      setState({
+        ...state,
+        toggleNav: false,
+      });
     } else {
-      setToggleState(true);
+      setState({
+        ...state,
+        toggleNav: true,
+      });
     }
   }
 
-  function handleToggle() {
-    setToggleState(false);
-  }
   return (
     <div className="nav__bar flex fixed  ">
       <AnimatePresence>
-        {toggleState && (
+        {state.toggleNav && (
           <div className="options ">
             <motion.div
               initial={{ width: 0 }}
@@ -126,11 +130,11 @@ export default function NavBar() {
         <motion.div
           initial={{ opacity: 0 }}
           whileHover={{ opacity: 0.1 }}
-          onClick={toggleNav}
+          onClick={handleToggle}
           className="button__toggle h-screen w-3 bg-white opacity-50  flex items-center justify-center z-0 "
         ></motion.div>
         <motion.div
-          onClick={toggleNav}
+          onClick={handleToggle}
           initial={{ opacity: 0.3 }}
           whileHover={{ opacity: 1 }}
           className="button h-40 w-3 bg-gray-400 rounded-xl z-10 absolute mr-1 "

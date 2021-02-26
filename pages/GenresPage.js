@@ -4,10 +4,15 @@ import Link from "next/link";
 import { Context } from "../public/Components/Context";
 
 export default function GenresPage() {
-  const [toggleState, setToggleState] = useContext(Context);
+  const [state, setState] = useContext(Context);
 
   function handleToggle() {
-    setToggleState(false);
+    if (state.toggleNav) {
+      setState({
+        ...state,
+        toggleNav: false,
+      });
+    }
   }
 
   return (

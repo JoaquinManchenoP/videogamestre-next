@@ -8,7 +8,8 @@ import axios from "axios";
 import CircleLoader from "react-spinners/CircleLoader";
 import { Context } from "./Context";
 
-export default function gameShowcase() {
+export default function gameShowcase({ games }) {
+  console.log(games.newGames);
   const [videoGamesTrending, setVideoGamesTrending] = useState();
   const [newVideoGames, setNewVideoGames] = useState();
   const [loading, setLoading] = useState(false);
@@ -33,7 +34,6 @@ export default function gameShowcase() {
     }
 
     fetchData();
-    console.log(loading);
   }, []);
 
   // useEffect(() => {
@@ -53,9 +53,9 @@ export default function gameShowcase() {
   //   fetchData();
   // }, []);
   return (
-    <div className="text-white bg-dark-gray  ">
+    <div className="text-white bg-dark-gray w-full   ">
       {loading ? (
-        <div className="loader flex items-center justify-center pt-32">
+        <div className="loader flex items-center justify-center pt-32 ">
           <CircleLoader
             className="h-full w-full  "
             loading={loading}
@@ -66,22 +66,22 @@ export default function gameShowcase() {
       ) : (
         <>
           <div className="trending ">
-            <motion.div className="trending__titl pl-28 text-3xl font-extralight underline pb-2  ">
-              < h1 className = "pl-16">Popular</h1>
+            <motion.div className="trending__title pl-28 text-3xl font-extralight underline pb-2 overflow-hidden  ">
+              <h1>Popular</h1>
             </motion.div>
             {videoGamesTrending && (
               <div className="slider mx-12">
-                <ImageSlider games={videoGamesTrending} />
+                <ImageSlider games={games.popularGames} />
               </div>
             )}
           </div>
           <div className="new__games pt-10">
             <motion.div className="trending__title pl-28 text-3xl font-extralight underline pb-2  ">
-              <h1 className="pl-16">New Games</h1>
+              <h1 >New Games</h1>
             </motion.div>
             {videoGamesTrending && (
               <div className="slider mx-12 ">
-                <ImageSlider games={newVideoGames} />
+                <ImageSlider games={games.newGames} />
               </div>
             )}
           </div>

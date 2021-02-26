@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps, router }) {
   return (
     <>
       <Store>
-        <div className="app h-screen w-screen bg-dark-gray">
+        <div className="app h-screen  bg-dark-gray ">
           <div className="nav z-20 absolute">
             <NavBar />
           </div>

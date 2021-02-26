@@ -1,19 +1,21 @@
 import React, { createContext, useState } from "react";
 
-const initialToggle = true;
+const navState = true;
+const toggleLoading = false;
+
+const initialState = {
+  games: [],
+  toggleNav: navState,
+  loading: toggleLoading,
+};
 
 export const Context = createContext();
 
 const Store = ({ children }) => {
-  const [toggleState, setToggleState] = useState(initialToggle);
-  const [loading, setLoading] = useState(false);
+  const [state, setState] = useState(initialState);
 
   return (
-    <Context.Provider
-      value={([toggleState, setToggleState], [loading, setLoading])}
-    >
-      {children}
-    </Context.Provider>
+    <Context.Provider value={[state, setState]}>{children}</Context.Provider>
   );
 };
 

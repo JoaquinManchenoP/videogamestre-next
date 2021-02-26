@@ -12,8 +12,8 @@ export default function GameCard({
 
   return (
     <>
-      <motion.div className="image h-full w-96 mx-2  pt-5 bg-gray-900 rounded-3xl justify-between  ">
-        <div className="image flex items-center justify-center  ">
+      <motion.div className="image h-full w-96   pt-5 bg-gray-900 rounded-3xl justify-between  ">
+        <div className="image flex items-center justify-center   ">
           {gameImage && (
             <motion.img
               initial={{ opacity: 0 }}
@@ -21,22 +21,18 @@ export default function GameCard({
               exit={{ opacity: 0 }}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              transition={{ duration: 0.2 }}
               className="h-60 w-11/12  object-cover rounded-2xl shadow-2xl "
               src={gameImage}
             ></motion.img>
           )}
         </div>
-        <div className="info flex justify-between mx-3 pt-2 ">
+        <div className="info flex justify-between pt-8 mx-3  ">
           <div className=" ">
             <div className="font-light text-lg pl-2">
               <h3>{gameName}</h3>
-              <span className="font-thin text-xs ">
-                {releaseDate.slice(0, 4)}
-              </span>
             </div>
           </div>
-          <div className="font-thin pr-3">
+          <div className="font-thin ">
             {platforms && (
               <div className="consoles space-x-2 ">
                 {consoles.map((console) => (
@@ -44,6 +40,9 @@ export default function GameCard({
                 ))}
               </div>
             )}
+            <span className="font-thin text-xs ">
+              {releaseDate.slice(0, 4)}
+            </span>
           </div>
         </div>
       </motion.div>
