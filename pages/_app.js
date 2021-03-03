@@ -5,7 +5,6 @@ import Store from "../public/Components/Context";
 import "swiper/swiper.cjs";
 
 function MyApp({ Component, pageProps, router }) {
-  console.log(router);
   return (
     <>
       <Store>

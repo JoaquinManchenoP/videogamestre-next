@@ -2,14 +2,20 @@ import styles from "../styles/Home.module.css";
 import { motion } from "framer-motion";
 import GameShowcase from "../public/Components/GameShowcase";
 import Slider from "../public/Components/Slider";
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Context } from "../public/Components/Context";
 import axios from "axios";
+import PuffLoader from "react-spinners/PuffLoader";
+import { useRouter } from "next/router";
 
 export default function Home({ games }) {
   const [state, setState] = useContext(Context);
+  const [loading, setLoading] = useState(true);
+  const [loadingColor, setLoadingColor] = useState("#F6B80C");
 
-  console.log(games.heroGames);
+  const router = useRouter();
+
+  console.log(state.toggleNav);
 
   function handleToggle() {
     if (state.toggleNav) {
@@ -20,26 +26,59 @@ export default function Home({ games }) {
     }
   }
 
+  useEffect(() => {
+    if (state) {
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
+    } else {
+      setLoading(true);
+    }
+  }, []);
+
+  //  {loading ? (
+  // <div className="loader flex items-center justify-center pt-32 ">
+  //   <CircleLoader
+  //     className="h-full w-full  "
+  //     loading={loading}
+  //     size={100}
+  //     color={loadingColor}
+  //   />
+  // </div>
+
   return (
-    <motion.div
-      onClick={handleToggle}
-      className="indexPage h-full w-full bg-dark-gray flex flex-col items-center justify-items-center   "
-    >
-      <div className="slider h-full w-full  ">
-        <Slider games={games.heroGames} />
-      </div>
-      <GameShowcase games={games} />
-    </motion.div>
+    <>
+      {loading ? (
+        <div className="loader flex items-center justify-center pt-80  ">
+          <PuffLoader
+            className="h-full w-full  "
+            loading={loading}
+            size={120}
+            color={loadingColor}
+          />
+        </div>
+      ) : (
+        <motion.div
+          onClick={handleToggle}
+          className="indexPage h-full w-full bg-dark-gray flex flex-col items-center justify-items-center   "
+        >
+          <div className="slider h-full w-full  ">
+            <Slider games={games.heroGames} />
+          </div>
+          <GameShowcase games={games} />
+        </motion.div>
+      )}
+    </>
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   const requestPopular = await axios.get(
-    "https://api.rawg.io/api/games?key=320ec780f009438d91f5a4d404249793&dates=2016-10-01,2021-01-20&metacritic=90,100"
+    "https://api.rawg.io/api/games?key=320ec780f009438d91f5a4d404249793&dates=2019-01-01,2021-01-20&metacritic=80,100"
   );
 
   const requestNewGames = await axios.get(
-    "https://api.rawg.io/api/games?key=320ec780f009438d91f5a4d404249793&dates=2020-10-01,2021-01-20&metacritic=70,100"
+    "https://api.rawg.io/api/games?key=320ec780f009438d91f5a4d404249793&dates=2020-08-01,2021-02-01&metacritic=75,100"
   );
 
   const requestHeroGames = await axios.get(

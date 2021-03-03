@@ -55,7 +55,7 @@ export default function NavBar() {
                   transition={{ duration: 0.2 }}
                   exit={{ opacity: 0 }}
                 >
-                  <Link scroll={false} href="/">
+                  <a scroll={false} href="/">
                     <div
                       style={{ cursor: "pointer" }}
                       className="option flex space-x-3"
@@ -66,7 +66,7 @@ export default function NavBar() {
 
                       <h1>New</h1>
                     </div>
-                  </Link>
+                  </a>
                 </motion.div>
 
                 <motion.div
@@ -81,7 +81,7 @@ export default function NavBar() {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Link scroll={false} href="/GenresPage">
+                  <a scroll={false} href="/GenresPage">
                     <div
                       style={{ cursor: "pointer" }}
                       className="option flex space-x-3"
@@ -92,7 +92,7 @@ export default function NavBar() {
 
                       <h1>Genres</h1>
                     </div>
-                  </Link>
+                  </a>
                 </motion.div>
 
                 <motion.div
@@ -107,7 +107,7 @@ export default function NavBar() {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Link scroll={false} href="/SearchPage">
+                  <a scroll={false} href="/SearchPage">
                     <div
                       style={{ cursor: "pointer" }}
                       className="option flex space-x-3"
@@ -118,7 +118,7 @@ export default function NavBar() {
 
                       <h1>Search</h1>
                     </div>
-                  </Link>
+                  </a>
                 </motion.div>
               </motion.div>
             </motion.div>
