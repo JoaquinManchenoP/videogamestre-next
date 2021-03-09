@@ -38,7 +38,7 @@ export default function GameCard({
           )}
         </div>
 
-        <div className="info flex justify-between pt-8 mx-3  ">
+        <div className="info flex justify-between pt-8 mx-3   ">
           <div className=" ">
             <div className="font-light text-lg pl-2">
               <h3>{gameName}</h3>

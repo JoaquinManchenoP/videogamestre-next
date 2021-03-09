@@ -36,7 +36,7 @@ export default function gameShowcase({ games }) {
           <h1 className="">Popular</h1>
         </motion.div>
         {videoGamesTrending && (
-          <div className="slider mx-12">
+          <div className="slider mx-12 overflow-x-auto overflow-y-hidden">
             <ImageSlider games={games.popularGames} />
           </div>
         )}
@@ -46,7 +46,7 @@ export default function gameShowcase({ games }) {
           <h1 className="">New Games</h1>
         </motion.div>
         {videoGamesTrending && (
-          <div className="slider mx-12 ">
+          <div className="slider mx-12 overflow-x-scroll overflow-y-hidden ">
             <ImageSlider games={games.newGames} />
           </div>
         )}
