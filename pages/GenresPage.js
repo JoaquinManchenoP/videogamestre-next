@@ -24,9 +24,10 @@ export default function GenresPage() {
   }
 
   return (
-    <div
+    <motion.div
       className="genres_page h-screen w-screen flex flex-col items-center justify-center  "
       onClick={handleToggle}
+      exit={{ opacity: 0 }}
     >
       <div className="genres__container  h-screen w-10/12 flex flex-col  items-center justify-center">
         <div className="title text-white h-12 w-full  text-4xl font-thin pl-12 pt-12">
@@ -34,7 +35,9 @@ export default function GenresPage() {
         </div>
         <div className="genres_options text-8xl text-yellow-500  h-2/3 w-11/12 mt-32 flex items-center justify-center space-x-6">
           <div className="action__games flex flex-col items-center">
-            <GiSwordsEmblem />
+            <Link as="/joaquin/mancheno" href="/[genres]/[GameGenrePage]">
+              <GiSwordsEmblem />
+            </Link>
             <h1 className="text-sm pt-4">Action</h1>
           </div>
 
@@ -74,6 +77,6 @@ export default function GenresPage() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
