@@ -30,7 +30,7 @@ export default function Home({ games }) {
     if (state) {
       setTimeout(() => {
         setLoading(false);
-      }, 600);
+      }, 1100);
     } else {
       setLoading(true);
     }
@@ -72,7 +72,7 @@ export default function Home({ games }) {
   );
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const requestPopular = await axios.get(
     "https://api.rawg.io/api/games?key=320ec780f009438d91f5a4d404249793&dates=2019-01-01,2021-01-20&metacritic=80,100&page_size=25"
   );

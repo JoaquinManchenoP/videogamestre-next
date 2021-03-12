@@ -55,7 +55,7 @@ export default function NavBar() {
                   transition={{ duration: 0.2 }}
                   exit={{ opacity: 0 }}
                 >
-                  <Link scroll={false} href="/">
+                  <a scroll={false} href="/">
                     <div
                       style={{ cursor: "pointer" }}
                       className="option flex space-x-3"
@@ -66,7 +66,7 @@ export default function NavBar() {
 
                       <h1>New</h1>
                     </div>
-                  </Link>
+                  </a>
                 </motion.div>
 
                 <motion.div

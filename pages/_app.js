@@ -3,6 +3,7 @@ import { AnimatePresence } from "framer-motion";
 import NavBar from "../public/Components/NavBar.js";
 import Store from "../public/Components/Context";
 import "swiper/swiper.cjs";
+import { useEffect } from "react";
 
 function MyApp({ Component, pageProps, router }) {
   return (
