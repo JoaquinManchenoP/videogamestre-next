@@ -48,14 +48,14 @@ export default function NavBar() {
                 <motion.div
                   onClick={handleToggle}
                   className={
-                    router.pathname == "/" ? "text-white" : "text-gray-400"
+                    router.pathname == "/" ? "text-yellow-500" : "text-gray-400"
                   }
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.2 }}
                   exit={{ opacity: 0 }}
                 >
-                  <a scroll={false} href="/">
+                  <Link scroll={false} href="/">
                     <div
                       style={{ cursor: "pointer" }}
                       className="option flex space-x-3"
@@ -66,22 +66,22 @@ export default function NavBar() {
 
                       <h1>New</h1>
                     </div>
-                  </a>
+                  </Link>
                 </motion.div>
 
                 <motion.div
                   onClick={handleToggle}
                   className={
                     router.pathname == "/GenresPage"
-                      ? "text-white"
+                      ? "text-yellow-500"
                       : "text-gray-400"
                   }
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
                   transition={{ duration: 0.2 }}
+                  exit={{ opacity: 0 }}
                 >
-                  <a scroll={false} href="/GenresPage">
+                  <Link scroll={false} href="/GenresPage">
                     <div
                       style={{ cursor: "pointer" }}
                       className="option flex space-x-3"
@@ -92,14 +92,14 @@ export default function NavBar() {
 
                       <h1>Genres</h1>
                     </div>
-                  </a>
+                  </Link>
                 </motion.div>
 
                 <motion.div
                   onClick={handleToggle}
                   className={
                     router.pathname == "/SearchPage"
-                      ? "text-white"
+                      ? "text-yellow-500"
                       : "text-gray-400"
                   }
                   initial={{ opacity: 0 }}
@@ -107,7 +107,7 @@ export default function NavBar() {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <a scroll={false} href="/SearchPage">
+                  <Link scroll={false} href="/SearchPage">
                     <div
                       style={{ cursor: "pointer" }}
                       className="option flex space-x-3"
@@ -118,7 +118,7 @@ export default function NavBar() {
 
                       <h1>Search</h1>
                     </div>
-                  </a>
+                  </Link>
                 </motion.div>
               </motion.div>
             </motion.div>

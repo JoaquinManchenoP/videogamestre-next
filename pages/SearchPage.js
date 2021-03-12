@@ -18,6 +18,7 @@ export default function searchPage() {
       className="h-screen w-screen bg-gray-800"
       onClick={handleToggle}
       exit={{ opacity: 0 }}
+      transition={{ duration: 0.1 }}
     >
       SearchPage
     </motion.div>

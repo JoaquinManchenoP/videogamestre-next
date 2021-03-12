@@ -30,7 +30,7 @@ export default function Home({ games }) {
     if (state) {
       setTimeout(() => {
         setLoading(false);
-      }, 2000);
+      }, 600);
     } else {
       setLoading(true);
     }
