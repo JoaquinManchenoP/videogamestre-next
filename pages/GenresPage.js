@@ -36,57 +36,50 @@ export default function GenresPage() {
           <h1 className="">Genres</h1>
         </div>
         <div className="genres_options text-8xl text-yellow-500  h-2/3 w-11/12  flex items-center justify-center space-x-6">
-          <div className="action__games flex flex-col items-center">
-            <Link as="/genres/Action" href="/genres/[GameGenrePage]">
+          <div className="action__games flex flex-col items-center xxs:flex-col ">
+            <Link as="/genres/action" href="/genres/[GameGenrePage]">
               <GiSwordsEmblem />
             </Link>
             <h1 className="text-sm pt-4">Action</h1>
           </div>
 
           <div className="adventure_games">
-            <Link as="/genres/Adventure" href="/genres/[GameGenres]">
+            <Link as="/genres/adventure" href="/genres/[GameGenres]">
               <GiCaveman />
             </Link>
             <h1 className="text-sm pt-4">Adventure</h1>
           </div>
 
           <div className="indie flex flex-col items-center">
-            <Link as="/genres/Indie" href="/genres/[GameGenres]">
+            <Link as="/genres/indie" href="/genres/[GameGenres]">
               <MdVideogameAsset />
             </Link>
             <h1 className="text-sm pt-4">Indie</h1>
           </div>
 
           <div className="shooter_games flex flex-col items-center">
-            <Link as="/genres/Shooter" href="/genres/[GameGenres]">
+            <Link as="/genres/shooter" href="/genres/[GameGenres]">
               <GiMachineGunMagazine />
             </Link>
             <h1 className="text-sm pt-4">Shooter</h1>
           </div>
 
           <div className="racing__games flex flex-col items-center">
-            <Link as="/genres/Racing" href="/genres/[GameGenres]">
+            <Link as="/genres/racing" href="/genres/[GameGenres]">
               <GiRaceCar />
             </Link>
             <h1 className="text-sm pt-4">Racing</h1>
           </div>
 
-          <div className="rollplaying_games flex flex-col items-center">
-            <Link as="/genres/RPG" href="/genres/[GameGenres]">
-              <GiMountedKnight />
-            </Link>
-            <h1 className="text-sm pt-4">RPG</h1>
-          </div>
-
           <div className="sports_gameas flex flex-col items-center">
-            <Link as="/genres/Sports" href="/genres/[GameGenres]">
+            <Link as="/genres/sports" href="/genres/[GameGenres]">
               <GiSoccerBall />
             </Link>
             <h1 className="text-sm pt-4">Sports</h1>
           </div>
 
           <div className="strategy_games flex flex-col items-center">
-            <Link as="/genres/Strategy" href="/genres/[GameGenres]">
+            <Link as="/genres/strategy" href="/genres/[GameGenres]">
               <GiChessKnight />
             </Link>
             <h1 className="text-sm pt-4">Strategy</h1>

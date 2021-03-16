@@ -33,7 +33,7 @@ export default function Slider({ games }) {
 
   return (
     <>
-      <div className="image  max-h-full w-full   flex items-center justify-center flex-col  ">
+      <div className="image  max-h-full w-full  flex items-center justify-center flex-col  ">
         <motion.img
           custom={direction}
           key={page}
@@ -75,22 +75,20 @@ export default function Slider({ games }) {
             <FaArrowAltCircleRight />
           </motion.div>
         </div>
-      
-
       </div>
 
-        {currentGames[imageIndex] && (
-          <div className="game__info  w-full   ">
-            <div className="gameName text-white  text-right text-bottom pt-2 mx-72 ">
-              <h1 className="text-2xl font-light my-3">
-                {currentGames[imageIndex].name}
-              </h1>
-              <span className="font-extralight">
-                {currentGames[imageIndex].released.slice(0, 4)}
-              </span>
-            </div>
+      {currentGames[imageIndex] && (
+        <div className="game__info  w-full  ">
+          <div className="gameName text-white  text-right text-bottom  2xl:mr-32 lg:mr-16 lg-md:pr-48 md:pr-32 sm: pr-32  ">
+            <h1 className="text-2xl font-light my-3 ">
+              {currentGames[imageIndex].name}
+            </h1>
+            <span className="font-extralight">
+              {currentGames[imageIndex].released.slice(0, 4)}
+            </span>
           </div>
-        )}
+        </div>
+      )}
     </>
   );
 }

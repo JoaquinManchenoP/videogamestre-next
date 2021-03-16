@@ -43,7 +43,7 @@ export default function gameShowcase({ games }) {
       </div>
       <div className="new__games pt-10">
         <motion.div className="trending__title pl-28 text-3xl font-extralight underline pb-2  ">
-          <h1 className="">New Games</h1>
+          <h1 className="xxs: pl-12">New Games</h1>
         </motion.div>
         {videoGamesTrending && (
           <div className="slider mx-12 overflow-x-scroll overflow-y-hidden ">

@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import axios from "axios";
 import { motion } from "framer-motion";
+import PuffLoader from "react-spinners/PuffLoader";
 
 export default function GameDetails({ currentGame }) {
   console.log(currentGame);
@@ -12,8 +13,16 @@ export default function GameDetails({ currentGame }) {
   );
   const [thisGame, setThisGame] = useState();
   const [state, setState] = useContext(Context);
+  const [loading, setLoading] = useState(true);
+  const [loadingColor, setLoadingColor] = useState("#F6B80C");
 
   const router = useRouter();
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
 
   function handleToggle() {
     if (state.toggleNav) {
@@ -83,10 +92,23 @@ export default function GameDetails({ currentGame }) {
               <div className="screen__shots w-full h-32  mt-24 flex ">
                 {currentGame[0].short_screenshots.slice(2, 5).map((shots) => (
                   <div className="image h-32 w-full mx-2 ">
-                    <img
-                      className="object-cover abs h-40 w-42 rounded-2xl shadow-xl "
-                      src={shots.image}
-                    ></img>
+                    {loading ? (
+                      <div className="loader flex items-center justify-center pt-80  ">
+                        <PuffLoader
+                          className="h-20 w-20  "
+                          loading={loading}
+                          size={80}
+                          color={loadingColor}
+                        />
+                      </div>
+                    ) : (
+                      <motion.img
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        className="object-cover  h-40 w-42 rounded-2xl shadow-xl "
+                        src={shots.image}
+                      ></motion.img>
+                    )}
                   </div>
                 ))}
               </div>
