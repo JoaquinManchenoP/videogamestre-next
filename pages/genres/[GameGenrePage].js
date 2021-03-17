@@ -47,12 +47,12 @@ export default function GameGenrePage({ currentGenre }) {
           exit={{ opacity: 0 }}
         >
           <div className="game_content  h-screen w-5/6 flex flex-col itmes ">
-            <div className="title w-full h-20 text-4xl font-extralight pt-12  ">
-              <h className="text-white pl-10">{capitalizedGenre}</h>
+            <div className="title w-full h-20 text-4xl font-extralight  mt-20 flex xxs:justify-center xs:justify-start xs:pl-20 ">
+              <h className="text-white  ">{capitalizedGenre}</h>
             </div>
-            <div className="games_container w-full h-full  mt-16 flex flex-col items-center">
+            <div className="games_container w-full h-full  mt-16 flex flex-col  items-center">
               <div className="games h-full w-11/12  rounded-xl">
-                <div className="grid grid-cols-3 h-full w-full gap-1  items-center  ">
+                <div className="grid xxs:grid-cols-1 xs:grid-cols-3   h-full w-full gap-1  items-center  ">
                   {currentGenre &&
                     currentGenre.map((game) => (
                       <GenreGameCard
