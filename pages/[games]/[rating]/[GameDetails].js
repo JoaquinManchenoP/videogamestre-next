@@ -42,7 +42,7 @@ export default function GameDetails({ currentGame }) {
       <motion.div exit={{ opacity: 0 }}>
         <div
           onClick={handleToggle}
-          className="h-screen w-screen text-white flex flex-col items-center justify-center overflow-hidden "
+          className="h-screen w-screen text-white flex flex-col items-center justify-center  "
         >
           <div className="backround__image   ">
             <img

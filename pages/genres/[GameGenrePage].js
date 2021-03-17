@@ -46,11 +46,13 @@ export default function GameGenrePage({ currentGenre }) {
           className="flex flex-col items-center  overflow-y-scroll"
           exit={{ opacity: 0 }}
         >
-          <div className="game_content  h-screen w-5/6 flex flex-col itmes ">
-            <div className="title w-full h-20 text-4xl font-extralight  mt-20 flex xxs:justify-center xs:justify-start xs:pl-20 ">
-              <h className="text-white  ">{capitalizedGenre}</h>
+          <div className="game_content  h-screen w-5/6 flex flex-col ">
+            <div className="title w-full h-20 text-4xl font-extralight  mt-20 flex xxs:justify-center xs:justify-start xs:pl-20  ">
+              <h1 className="text-white text-4xl font-ultralight">
+                {capitalizedGenre}
+              </h1>
             </div>
-            <div className="games_container w-full h-full  mt-16 flex flex-col  items-center">
+            <div className="games_container w-full h-sreen  mt-16 flex flex-col  items-center bg-dark-gray shadow-2xl ">
               <div className="games h-full w-11/12  rounded-xl">
                 <div className="grid xxs:grid-cols-1 xs:grid-cols-3   h-full w-full gap-1  items-center  ">
                   {currentGenre &&
