@@ -53,15 +53,15 @@ export default function GameDetails({ currentGame }) {
           <div className=" gradient h-screen w-screen top-32  z-10 absolute mt-32  bg-gradient-to-b from-transparent via-gray-800 to-dark-gray"></div>
 
           <div className="  game__details__page h-screen w-4/6 pb-12  z-10 absolute mt-60   flex flex-col items-center   ">
-            <div className="game__title w-5/6 h-1/2  flex  space-x-6 ">
-              <div className="game__poster h-full w-1/2  flex items-center justify-center ">
+            <div className="game__title w-5/6 h-1/2  flex  xs:space-x-6  ">
+              <div className="game__poster h-full xs:w-1/2 xxs:w-full  flex items-center justify-center ">
                 <img
-                  className="h-96 w-80 object-cover rounded-3xl shadow-2xl absolute "
+                  className="h-96 w-80 object-cover rounded-3xl shadow-2xl absolute"
                   src={currentGame[0].background_image}
                 ></img>
               </div>
-              <div className="game__description w-1/2 flex items-center static    ">
-                <div className=" p-8 title space-y-3 ">
+              <div className="game__description  xs:w-1/2 flex items-center static xss:w-full xxs:absolute xxs:mr-2 xs:static text-white  ">
+                <div className="pt-6 title space-y-3 mx-4 ">
                   <h1 className="text-3xl font-light pb-3">
                     {currentGame[0].name}
                   </h1>
@@ -74,11 +74,11 @@ export default function GameDetails({ currentGame }) {
                       <div className="rating text-md font-thin">
                         <h1>Metacritic: {currentGame[0].metacritic}</h1>
                       </div>
-                      <div className="consoles flex space-x-4 pt-48   ">
+                      <div className="consoles flex space-x-4 pt-36   ">
                         {currentGame[0].platforms
                           .slice(0, 3)
                           .map((platforms) => (
-                            <div className="platforms text-sm font-thin">
+                            <div className="platforms text-sm font-thin xxs:pt-8">
                               <span>{platforms.platform.name}</span>
                             </div>
                           ))}
