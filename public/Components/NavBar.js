@@ -74,7 +74,7 @@ export default function NavBar() {
                       style={{ cursor: "pointer" }}
                       className="option flex space-x-3"
                     >
-                      <div className="icon ">
+                      <div className="icon pt-1">
                         <FaGamepad size={22} />
                       </div>
 
