@@ -10,7 +10,7 @@ export default function GameGenrePage({ currentGenre }) {
   const router = useRouter();
   const [capitalizedGenre, setCapitalizedGenre] = useState("");
   const [loading, setLoading] = useState(true);
-  const [loadingColor, setLoadingColor] = useState("#F6B80C");
+  const [loadingColor, setLoadingColor] = useState("F6B80C#");
 
   console.log(router.query);
 

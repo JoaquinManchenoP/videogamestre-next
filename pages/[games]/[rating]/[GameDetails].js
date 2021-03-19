@@ -78,7 +78,7 @@ export default function GameDetails({ currentGame }) {
                         {currentGame[0].platforms
                           .slice(0, 3)
                           .map((platforms) => (
-                            <div className="platforms text-sm font-thin xxs:pt-8">
+                            <div className="platforms text-sm font-thin ">
                               <span>{platforms.platform.name}</span>
                             </div>
                           ))}
@@ -124,8 +124,6 @@ export async function getServerSideProps(context) {
   const requestGame = await axios.get(
     `https://api.rawg.io/api/games?key=320ec780f009438d91f5a4d404249793&search=${context.query.GameDetails}&dates=${context.query.games}&search_precise=true`
   );
-
-  console.log("concha de la lora");
 
   return {
     props: {
