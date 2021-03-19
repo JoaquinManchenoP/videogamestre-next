@@ -1,4 +1,5 @@
 import "tailwindcss/tailwind.css";
+import "../styles/globals.css";
 import { AnimatePresence } from "framer-motion";
 import NavBar from "../public/Components/NavBar.js";
 import Store from "../public/Components/Context";
