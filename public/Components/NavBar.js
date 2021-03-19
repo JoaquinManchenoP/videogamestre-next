@@ -3,9 +3,11 @@ import React, { useState, useContext } from "react";
 import Link from "next/link";
 import { Context } from "./Context";
 import { useRouter } from "next/router";
-import { CgGames } from "react-icons/Cg";
+import { MdVideogameAsset } from "react-icons/bs";
+
 import { BsFillCollectionFill } from "react-icons/bs";
 import { FaSearch } from "react-icons/Fa";
+import { FaGamepad } from "react-icons/Fa";
 import { RiGameFill } from "react-icons/ri";
 
 export default function NavBar() {
@@ -72,8 +74,8 @@ export default function NavBar() {
                       style={{ cursor: "pointer" }}
                       className="option flex space-x-3"
                     >
-                      <div className="icon pt-1">
-                        <CgGames />
+                      <div className="icon ">
+                        <FaGamepad size={22} />
                       </div>
 
                       <h1>New</h1>
