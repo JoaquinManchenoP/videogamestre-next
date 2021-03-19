@@ -23,10 +23,10 @@
     "react-responsive-carousel": "^3.2.12",
     "react-slick": "^0.28.0",
     "react-spinners": "^0.10.6",
-    "swiper": "^6.4.15",
-    "tailwindcss": "^2.0.3"
+    "swiper": "^6.4.15"
   },
   "devDependencies": {
+    "tailwindcss": "^2.0.3",
     "autoprefixer": "^10.2.4",
     "postcss": "^8.2.6"
   }
