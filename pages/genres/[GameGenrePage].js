@@ -10,7 +10,7 @@ export default function GameGenrePage({ currentGenre }) {
   const router = useRouter();
   const [capitalizedGenre, setCapitalizedGenre] = useState("");
   const [loading, setLoading] = useState(true);
-  const [loadingColor, setLoadingColor] = useState("F6B80C#");
+  const [loadingColor, setLoadingColor] = useState("#ff5811");
 
   console.log(router.query);
 
@@ -44,6 +44,8 @@ export default function GameGenrePage({ currentGenre }) {
       ) : (
         <motion.div
           className="flex flex-col items-center  overflow-y-scroll"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
           <div className="game_content  h-screen w-5/6 flex flex-col ">
@@ -52,7 +54,7 @@ export default function GameGenrePage({ currentGenre }) {
                 {capitalizedGenre}
               </h1>
             </div>
-            <div className="games_container w-full h-sreen  mt-16 flex flex-col  items-center bg-dark-gray shadow-2xl ">
+            <div className="games_container w-full h-sreen  mt-16 flex flex-col  items-center bg-dark-gray ">
               <div className="games h-full w-11/12  rounded-xl">
                 <div className="grid xxs:grid-cols-1 xs:grid-cols-3   h-full w-full gap-1  items-center  ">
                   {currentGenre &&
@@ -76,7 +78,7 @@ export default function GameGenrePage({ currentGenre }) {
 
 export async function getServerSideProps(context) {
   const requestGenre = await axios.get(
-    `https://api.rawg.io/api/games?key=320ec780f009438d91f5a4d404249793&genres=${context.query.GameGenrePage}&metacritic=70,100&&dates=2018-05-01,2021-02-20&page=1&page_size=39&search_precise=true`
+    `https://api.rawg.io/api/games?key=${process.env.NEXT_INDEX_KEY}&genres=${context.query.GameGenrePage}&metacritic=70,100&&dates=2018-05-01,2021-02-20&page=1&page_size=39&search_precise=true`
   );
 
   return {

@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import { CgGames } from "react-icons/Cg";
 import { BsFillCollectionFill } from "react-icons/bs";
 import { FaSearch } from "react-icons/Fa";
+import { RiGameFill } from "react-icons/ri";
 
 export default function NavBar() {
   const [state, setState] = useContext(Context);
@@ -43,12 +44,23 @@ export default function NavBar() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.1, delay: 0.4 }}
-                className="nav__options h-1/2 flex flex-col mr-12 items-left justify-center pl-9 space-y-4"
+                className="nav__options pt-20 h-1/2 flex flex-col mr-12 items-left justify-center pl-9 space-y-8"
               >
+                <motion.div
+                  className="branf__logo h-20 w-20 mb-12 ml-6"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.2 }}
+                  exit={{ opacity: 0 }}
+                >
+                  <RiGameFill className="text-neon-orange" size={70} />
+                </motion.div>
                 <motion.div
                   onClick={handleToggle}
                   className={
-                    router.pathname == "/" ? "text-yellow-500" : "text-gray-400"
+                    router.pathname == "/"
+                      ? "text-neon-orange"
+                      : "text-gray-400"
                   }
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -68,12 +80,11 @@ export default function NavBar() {
                     </div>
                   </Link>
                 </motion.div>
-
                 <motion.div
                   onClick={handleToggle}
                   className={
                     router.pathname == "/GenresPage"
-                      ? "text-yellow-500"
+                      ? "text-neon-orange"
                       : "text-gray-400"
                   }
                   initial={{ opacity: 0 }}
@@ -94,12 +105,11 @@ export default function NavBar() {
                     </div>
                   </Link>
                 </motion.div>
-
                 <motion.div
                   onClick={handleToggle}
                   className={
                     router.pathname == "/SearchPage"
-                      ? "text-yellow-500"
+                      ? "text-neon-orange"
                       : "text-gray-400"
                   }
                   initial={{ opacity: 0 }}

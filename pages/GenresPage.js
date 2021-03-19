@@ -32,7 +32,7 @@ export default function GenresPage() {
       <div className="options__container xxs:h-full xs:h-80   bg-dark-gray rounded-3xl shadow-2xl flex items-center justify-center xxs:flex-col xxs:space-y-6 xs:space-y-12  md:space-y-12 ">
         <div className="top__section px-10 flex xxs:flex-col xxs:space-y-6 xs:space-y-0  xs:flex-row  xs:space-x-16  ">
           <div className="option" style={{ cursor: "pointer" }}>
-            <div className="action__games  text-yellow-500 flex flex-col items-center xxs:flex-col justify-center ">
+            <div className="action__games  text-neon-orange flex flex-col items-center xxs:flex-col justify-center ">
               <Link as="/genres/action" href="/genres/[GameGenrePage]">
                 <GiSwordsEmblem size={44} />
               </Link>
@@ -40,7 +40,7 @@ export default function GenresPage() {
             </div>
           </div>
           <div className="option" style={{ cursor: "pointer" }}>
-            <div className="action__games  text-yellow-500 flex flex-col items-center xxs:flex-col justify-center ">
+            <div className="action__games  text-neon-orange flex flex-col items-center xxs:flex-col justify-center ">
               <Link as="/genres/adventure" href="/genres/[GameGenrePage]">
                 <GiCaveman size={44} />
               </Link>
@@ -48,7 +48,7 @@ export default function GenresPage() {
             </div>
           </div>
           <div className="option" style={{ cursor: "pointer" }}>
-            <div className="action__games  text-yellow-500 flex flex-col items-center xxs:flex-col justify-center ">
+            <div className="action__games text-neon-orange flex flex-col items-center xxs:flex-col justify-center ">
               <Link as="/genres/indie" href="/genres/[GameGenrePage]">
                 <MdVideogameAsset size={44} />
               </Link>
@@ -58,7 +58,7 @@ export default function GenresPage() {
         </div>
         <div className="bottom__section px-10 flex xxs:flex-col xxs:space-y-6 xs:space-y-0  xs:flex-row xs:space-x-16  md:text-red-400 ">
           <div className="option" style={{ cursor: "pointer" }}>
-            <div className="action__games  text-yellow-500 flex flex-col items-center xxs:flex-col justify-center ">
+            <div className="action__games  text-neon-orange flex flex-col items-center xxs:flex-col justify-center ">
               <Link as="/genres/shooter" href="/genres/[GameGenrePage]">
                 <GiMachineGunMagazine size={44} />
               </Link>
@@ -66,7 +66,7 @@ export default function GenresPage() {
             </div>
           </div>
           <div className="option" style={{ cursor: "pointer" }}>
-            <div className="action__games  text-yellow-500 flex flex-col items-center xxs:flex-col justify-center ">
+            <div className="action__games  text-neon-orange flex flex-col items-center xxs:flex-col justify-center ">
               <Link as="/genres/racing" href="/genres/[GameGenrePage]">
                 <GiRaceCar size={44} />
               </Link>
@@ -74,7 +74,7 @@ export default function GenresPage() {
             </div>
           </div>
           <div className="option" style={{ cursor: "pointer" }}>
-            <div className="action__games  text-yellow-500 flex flex-col items-center xxs:flex-col justify-center ">
+            <div className="action__games  text-neon-orange flex flex-col items-center xxs:flex-col justify-center ">
               <Link as="/genres/shooter" href="/genres/[GameGenrePage]">
                 <GiMachineGunMagazine size={44} />
               </Link>
