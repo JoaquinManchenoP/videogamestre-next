@@ -3,12 +3,6 @@ import React, { useState, useContext } from "react";
 import Link from "next/link";
 import { Context } from "./Context";
 import { useRouter } from "next/router";
-import { MdVideogameAsset } from "react-icons/bs";
-
-import { BsFillCollectionFill } from "react-icons/bs";
-import { FaSearch } from "react-icons/Fa";
-import { FaGamepad } from "react-icons/Fa";
-import { RiGameFill } from "react-icons/ri";
 
 export default function NavBar() {
   const [state, setState] = useContext(Context);
@@ -54,9 +48,7 @@ export default function NavBar() {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.2 }}
                   exit={{ opacity: 0 }}
-                >
-                  <RiGameFill className="text-neon-orange" size={70} />
-                </motion.div>
+                ></motion.div>
                 <motion.div
                   onClick={handleToggle}
                   className={
@@ -74,10 +66,6 @@ export default function NavBar() {
                       style={{ cursor: "pointer" }}
                       className="option flex space-x-3"
                     >
-                      <div className="icon pt-1">
-                        <FaGamepad size={22} />
-                      </div>
-
                       <h1>New</h1>
                     </div>
                   </Link>
@@ -99,10 +87,6 @@ export default function NavBar() {
                       style={{ cursor: "pointer" }}
                       className="option flex space-x-3"
                     >
-                      <div className="icon pt-1">
-                        <BsFillCollectionFill />
-                      </div>
-
                       <h1>Genres</h1>
                     </div>
                   </Link>
@@ -124,10 +108,6 @@ export default function NavBar() {
                       style={{ cursor: "pointer" }}
                       className="option flex space-x-3"
                     >
-                      <div className="icon pt-1">
-                        <FaSearch />
-                      </div>
-
                       <h1>Search</h1>
                     </div>
                   </Link>
