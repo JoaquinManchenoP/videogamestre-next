@@ -137,7 +137,7 @@ export default function GameDetails({ currentGame }) {
 
 export async function getServerSideProps(context) {
   const requestGame = await axios.get(
-    `https://api.rawg.io/api/games?key=${process.env.NEXT_INDEX_KEY}&search=${context.query.GameDetails}&dates=${context.query.games}&search_precise=true`
+    `https://api.rawg.io/api/games?key=320ec780f009438d91f5a4d404249793&search=${context.query.GameDetails}&dates=${context.query.games}&search_precise=true`
   );
 
   return {

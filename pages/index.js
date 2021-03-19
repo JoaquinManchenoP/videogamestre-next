@@ -74,15 +74,15 @@ export default function Home({ games }) {
 
 export async function getServerSideProps(context) {
   const requestPopular = await axios.get(
-    `https://api.rawg.io/api/games?key=${process.env.NEXT_INDEX_KEY}=2019-01-01,2021-01-20&metacritic=80,100&page_size=25`
+    "https://api.rawg.io/api/games?key=320ec780f009438d91f5a4d404249793&dates=2019-01-01,2021-01-20&metacritic=80,100&page_size=25"
   );
 
   const requestNewGames = await axios.get(
-    `https://api.rawg.io/api/games?key=${process.env.NEXT_INDEX_KEY}=2020-10-20,2021-02-01&metacritic=68,100&page_size=25`
+    "https://api.rawg.io/api/games?key=320ec780f009438d91f5a4d404249793&dates=2020-10-20,2021-02-01&metacritic=68,100&page_size=25"
   );
 
   const requestHeroGames = await axios.get(
-    `https://api.rawg.io/api/games?key=${process.env.NEXT_INDEX_KEY}&dates=2020-10-01,2021-01-01&metacritic=80,100`
+    "https://api.rawg.io/api/games?key=320ec780f009438d91f5a4d404249793&dates=2020-10-01,2021-01-01&metacritic=80,100"
   );
 
   return {
