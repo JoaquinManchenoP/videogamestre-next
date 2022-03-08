@@ -24,7 +24,11 @@ cd videogamestore-next
 
 ### Install dependencies
 
+use node v8.11.1
+
 npm install
+
+switch to node v16.14.0
 
 ### Start the server
 
