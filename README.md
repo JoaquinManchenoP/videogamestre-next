@@ -1,6 +1,6 @@
 ## Videogame App
 
-A movie watchlist app that allows users to search movies from the TMDB Api as well as creating a watchlist from which users can add and remove their favorite movies.
+An app that consumes and displays data from a videogame API, it allows users search for gaming titles and access brief descriptions and reviews of their favorite games.
 
 ## Screenshots
 
